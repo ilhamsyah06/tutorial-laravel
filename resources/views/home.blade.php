@@ -15,9 +15,32 @@
                     @endif
 
                     You are logged in!
+                  
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('footer')
+    <script>
+          window.addEventListener('keyup', function (event) {
+ 
+        switch (event.keyCode) {
+            // case 118: // F7
+            // 	$('#barang').focus();
+            // 	break;
+            case 81: // tombol q
+            window.location.href = "/user";
+                break;
+            case 87: // tombol w
+            window.location.href = "/pembelian";
+                break;
+            case 69: // tombol e
+            window.location.href = "/penjualan";
+                break;
+        }
+    }, false);
+    </script>
 @endsection

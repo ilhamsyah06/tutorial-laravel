@@ -22,5 +22,8 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth', 'checkRole:admin,kasir,gudang']], function () {
     Route::get('dashboard','DashboardController@viewpage');
+    Route::get('user','UserController@index');
+    Route::get('penjualan','PenjualanController@index');
+    Route::get('pembelian','PembelianController@index');
 
 });
